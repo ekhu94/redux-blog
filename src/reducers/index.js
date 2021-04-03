@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import postsReducer from './postsReducer';
 
 
-
-export default combineReducers({ replaceMe: () => 'TODO' })
+export default combineReducers({
+    posts: postsReducer
+});
