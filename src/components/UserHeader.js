@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { fetchUser } from '../actions';
 
-const UserHeader = (props) => {
+const UserHeader = ({userId}) => {
 
+    useEffect(() => {
+        props.fetchUser(userId);
+    }, []);
+
+    return (
+        <div>
+            User Header
+        </div>
+    );
 };
 
-export default UserHeader;
+export default connect(null, { fetchUser })(UserHeader);
