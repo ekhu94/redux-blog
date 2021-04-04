@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchUser } from '../actions';
 
-const UserHeader = ({userId}) => {
+const UserHeader = props => {
 
     useEffect(() => {
-        props.fetchUser(userId);
+        props.fetchUser(props.userId);
     }, []);
 
     return (
